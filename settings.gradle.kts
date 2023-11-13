@@ -15,4 +15,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "CartaMasAltaEVR"
 include(":app")
+include(":app")
+include(":app")
  

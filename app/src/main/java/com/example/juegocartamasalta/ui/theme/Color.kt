@@ -1,4 +1,4 @@
-package com.example.cartamasaltaevr.ui.theme
+package com.example.juegocartamasalta.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

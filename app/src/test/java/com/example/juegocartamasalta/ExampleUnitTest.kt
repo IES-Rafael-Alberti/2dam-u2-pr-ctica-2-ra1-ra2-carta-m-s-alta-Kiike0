@@ -1,4 +1,4 @@
-package com.example.cartamasaltaevr
+package com.example.juegocartamasalta
 
 import org.junit.Test
 

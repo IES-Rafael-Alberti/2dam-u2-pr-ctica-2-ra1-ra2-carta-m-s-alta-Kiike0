@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.cartamasaltaevr"
+    namespace = "com.example.juegocartamasalta"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.cartamasaltaevr"
+        applicationId = "com.example.juegocartamasalta"
         minSdk = 34
         targetSdk = 34
         versionCode = 1
