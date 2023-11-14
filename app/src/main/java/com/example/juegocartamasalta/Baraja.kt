@@ -36,10 +36,10 @@ class Baraja {
          */
         fun dameCarta(): Carta? {
             if (listaCartas.size>0) {
-                val cartaTemp = listaCartas.last()
-                listaCartas.remove(cartaTemp)
+                val lastCard = listaCartas.last()
+                listaCartas.remove(lastCard)
                 tamano = listaCartas.size
-                return cartaTemp
+                return lastCard
             }
             return null
 

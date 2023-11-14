@@ -1,20 +1,24 @@
 package com.example.juegocartamasalta
 
-class Carta (val nombre: Naipes, val palo : Palos, var puntosMin: Int, var puntosMax: Int, var idDrawable:Int){
+class Carta (val nombre: Naipes, val palo : Palos, var puntosMin: Int, var puntosMax: Int, var idDrawable:Int) {
 
     /**
-     * Funcionamiento para el juego que vayamos a hacer posteriormente
+     * Funcionamiento para el juego que vamos a utilizar
      */
     init {
-        if (nombre.valor == 1){
-            puntosMax = 11
-            puntosMin = 1
-        }else if(nombre.valor in 2 ..11){
-            puntosMax = nombre.valor
-            puntosMin = nombre.valor
-        }else if(nombre.valor > 10){
-            puntosMax = 10
-            puntosMin = 10
+        when (nombre.valor) {
+            1 -> {
+                puntosMin = 1
+                puntosMax = 11
+            }
+            in 2..11 -> {
+                puntosMin = nombre.valor
+                puntosMax = nombre.valor
+            }
+            else -> {
+                puntosMin = 10
+                puntosMax = 10
+            }
         }
         idDrawable = nombre.valor + (palo.valor * 13)
     }
