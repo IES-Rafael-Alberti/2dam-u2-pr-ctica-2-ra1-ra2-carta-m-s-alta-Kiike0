@@ -3,6 +3,10 @@ package com.example.juegocartamasalta
 class Baraja {
     companion object {
         private var listaCartas: MutableList<Carta> = mutableListOf()
+        init {
+            crearBaraja()
+            barajar()
+        }
 
         fun crearBaraja() {
             for (palo in Palos.values()) {
