@@ -50,6 +50,10 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+/**
+ * Método creado Composable que define lo que pasa en pantalla
+ *
+ */
 @Preview(showBackground = true)
 @Composable
 fun AccionIniciar() {
@@ -63,7 +67,7 @@ fun AccionIniciar() {
             .fillMaxSize()
             .background(Color.Red),
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally //Centra el contenido de la columna
     )
     {
         Image(
@@ -82,24 +86,24 @@ fun AccionIniciar() {
             horizontalArrangement = Arrangement.Center
         ) {
             Button(
-                onClick = {
+                onClick = { //Enseña la carta de la baraja y si es nula enseña el reverso
                     val choosenCard = miBaraja.dameCarta()
                     showCard = if (choosenCard == null) {
                         "reverso"
                     } else
                         "c${choosenCard.idDrawable}"
                 },
-                shape = RoundedCornerShape(10.dp),
+                shape = RoundedCornerShape(10.dp), //Hace al botón más cuadrado
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color.Black,
-                    contentColor = Color.White
+                    contentColor = Color.White //Cambia el color de los botones
                 )
             ) {
                 Text(text = "Dame carta")
             }
             Spacer(modifier = Modifier.width(16.dp))
             Button(
-                onClick = {
+                onClick = { //Reinicia la baraja desde 0
                     miBaraja.crearBaraja()
                     miBaraja.barajar()
                     showCard = "reverso"

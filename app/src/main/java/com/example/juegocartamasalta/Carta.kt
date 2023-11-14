@@ -1,6 +1,10 @@
 package com.example.juegocartamasalta
 
 class Carta (val nombre: Naipes, val palo : Palos, var puntosMin: Int, var puntosMax: Int, var idDrawable:Int){
+
+    /**
+     * Funcionamiento para el juego que vayamos a hacer posteriormente
+     */
     init {
         if (nombre.valor == 1){
             puntosMax = 11
